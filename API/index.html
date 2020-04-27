@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Responsive + Encoding Meta Tag -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Stylesheet -->
+    <link href = "./style/style.css" rel = "stylesheet">
+    <!-- Title -->
+    <title> Vue.JS API Call to Travel Info </title>
+</head>
+<body>
+    <div id="main">
+        <h1> API Call Flight Prices </h1>
+		<form id="originInput" action="/action_page.php">
+		Starting Airport: <input type="text" name="origin" ref="input">
+		<input type="button" @click="obtainOrigin" value="submit"><br><br>
+		</form>
+
+		<button type = "button" id = "travel-button" @click = "fetchAPIData">Get Flight Info</button>
+    </div>
+	<!-- <div v-if = "responseAvailable">
+        <hr>
+        <p v-if = "responseAvailable">
+            <i>{{ result }}</i>
+        </p>
+        </hr>
+</div> -->
+</body>
+<!-- Vue and Custom JavaScript -->
+<script src="./js/vue.js"></script>
+<script src = "script.js"></script>
+<script src="./js/vue-blob-json-csv-master/dist/VueBlobJsonCsv.umd.min.js"></script>
+</html>
